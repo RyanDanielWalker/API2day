@@ -3,6 +3,7 @@ export default class AsteroidInfo {
     const apiKey = process.env.API_KEY
     return fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${date}&end_date=${date}&api_key=${apiKey}`)
       .then(function (response) {
+        console.log(response);
         if (!response.ok) {
           throw Error(response.statusText);
         }
