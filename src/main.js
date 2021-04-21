@@ -3,6 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import AsteroidInfo from './js/asteroid.js';
+import EpicImg from './js/epic.js'
 
 function getElements(response) {
   let userDate = Object.keys(response["near_earth_objects"]);
@@ -10,6 +11,14 @@ function getElements(response) {
   if (response) {
     $(".show-count").html(`<p>There were ${response.element_count} asteroids near Earth on your birthday. </p>`);
     $(".show-dist").html(`<p>The closest asteroid was ${yes} miles away from earth</p>`);
+  }
+}
+
+function getPicture(response, date) {
+  if (response) {
+    let add = response[0].image;
+    console.log(add);
+    $(".show-img").html(`<img src="https://epic.gsfc.nasa.gov/archive/natural/${date}/png/${add}.png"/>`);
   }
 }
 
@@ -23,5 +32,9 @@ $(document).ready(function () {
       .then(function (response) {
         getElements(response, date);
       });
+    EpicImg.getImg(date)
+      .then(function (response) {
+        getPicture(response, date);
+      })
   });
 });
