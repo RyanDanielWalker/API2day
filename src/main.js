@@ -7,23 +7,27 @@ import EpicImg from './js/epic.js'
 
 function getElements(response) {
   let userDate = Object.keys(response["near_earth_objects"]);
-  let yes = parseInt(response.near_earth_objects[userDate][0].close_approach_data[0].miss_distance.miles).toFixed(1);
+  let dist = parseInt(response.near_earth_objects[userDate][0].close_approach_data[0].miss_distance.miles).toFixed(1);
   if (response) {
     $(".show-count").html(`<p>There were ${response.element_count} asteroids near Earth on your birthday!!! </p>`);
-    $(".show-dist").html(`<p>The closest asteroid was ${yes} miles away from earth!!!</p>`);
+    $(".show-dist").html(`<p>The closest asteroid was ${dist} miles away from earth!!!</p>`);
   }
 }
 
 function getPicture(response) {
   if (response) {
     let add = response[0].url;
-    $(".show-img").html(`<img src="${add}"/>`);
+    $(".show-img").html(`<img class="pic" src="${add}"/>`);
   }
 }
 
 
 
 $(document).ready(function () {
+  let [month, date, year] = new Date().toLocaleDateString("en-US").split("/")
+  let today = year + '-' + ('0' + month).slice(-2) + '-' + ('0' + date).slice(-2);
+  console.log(today)
+  $("button").before(`<input id="bday" type="date" max="${today}">`)
   $("#form").submit(function (event) {
     event.preventDefault();
     let date = $("#bday").val();
@@ -38,3 +42,4 @@ $(document).ready(function () {
       })
   });
 });
+
