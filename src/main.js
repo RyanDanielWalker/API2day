@@ -9,8 +9,8 @@ function getElements(response) {
   let userDate = Object.keys(response["near_earth_objects"]);
   let yes = response.near_earth_objects[userDate][0].close_approach_data[0].miss_distance.miles
   if (response) {
-    $(".show-count").html(`<p>There were ${response.element_count} asteroids near Earth on your birthday. </p>`);
-    $(".show-dist").html(`<p>The closest asteroid was ${yes} miles away from earth</p>`);
+    $(".show-count").html(`<p>There were ${response.element_count} asteroids near Earth on your birthday!!! </p>`);
+    $(".show-dist").html(`<p>The closest asteroid was ${yes} miles away from earth!!!</p>`);
   }
 }
 

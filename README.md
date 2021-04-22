@@ -8,30 +8,42 @@
 This webpage will allow the user to see how many Near Earth Objects existed and how close the nearest one was on the date of their birth. It will also display the official NASA image of the day for that day, if one is available.
 
 
-## Setup/Installation Requirements
+## Setup and Use
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+### Prerequisites
+* [Node](https://nodejs.org/en/)
+* A text editor like [VS Code](https://code.visualstudio.com/)
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+### Installation
+1. Clone the repository: `$ git clone https://github.com/RyanDanielWalker/API2day`
+2. Navigate to the `my-project/` directory on your computer
+3. Open with your preferred text editor to view the code base
+4. To start a development server and view the project in the browser:
+    * Navigate to `my-project/` in your command line
+    * Run the command `npm install` to install dependencies
+    * Optionally, run the command `npm run build` to make a bundle of the files
+    * Finally, run the command `npm run start` to start a development server
+5. To run tests, navigate to `my-project/` in your terminal and run the command `npm run test`
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
-
-## Support and contact details
-
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
 
 ## Technologies Used
+* HTML
+* CSS
+* Bootstrap
+* Javascript
+* jQuery
+* VS Code
+* webpack
+* ESLint
+* Babel
+* npm
+* Popper
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+MIT
 
-Copyright (c) 2020 **_{Your name}_**
+Copyright (c) 2021 _Ryan Walker, Maxwell Meyer, John Edmondson_
