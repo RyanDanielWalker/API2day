@@ -14,13 +14,14 @@ function getElements(response) {
   }
 }
 
-function getPicture(response, date) {
+function getPicture(response) {
   if (response) {
-    let add = response[0].image;
-    console.log(add);
-    $(".show-img").html(`<img src="https://epic.gsfc.nasa.gov/archive/natural/${date}/png/${add}.png"/>`);
+    // let userDate = response[0].date;
+    let add = response[0].url;
+    $(".show-img").html(`<img src="${add}"/>`);
   }
 }
+
 
 
 $(document).ready(function () {
@@ -34,7 +35,7 @@ $(document).ready(function () {
       });
     EpicImg.getImg(date)
       .then(function (response) {
-        getPicture(response, date);
+        getPicture(response);
       })
   });
 });
