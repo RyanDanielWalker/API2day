@@ -4,7 +4,7 @@ export default class EpicImg {
     return fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&start_date=${date}&end_date=${date}`)
       .then(function (response) {
         if (!response.ok) {
-          alert("Woops, no photos from this day!")
+          // alert("Woops, no photos from this day!")
           throw Error(response.statusText);
         }
         return response.json();
