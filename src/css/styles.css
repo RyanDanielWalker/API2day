@@ -1,0 +1,33 @@
+/* Nasa Color Scheme
+Blue: #0b3d91
+Red: #fc3d21 */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to bottom, #000, blue);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+  color: #fff;
+}
+
+.jumbotron {
+  background-color: #113D91;
+  color: #F83D21;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 150px;
+  
+  
+}
+
+.container {
+  text-align: center;
+}
+
+#btn {
+  padding: 20px 20px;
+  border-radius: 50%;
+}

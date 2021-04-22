@@ -16,7 +16,6 @@ function getElements(response) {
 
 function getPicture(response) {
   if (response) {
-    // let userDate = response[0].date;
     let add = response[0].url;
     $(".show-img").html(`<img src="${add}"/>`);
   }
