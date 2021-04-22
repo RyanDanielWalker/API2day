@@ -5,7 +5,7 @@
 #### By _Ryan Walker, Maxwell Meyer, John Edmondson_
 
 ## Description
-This webpage will allow the user to see how many Near Earth Objects existed and how close the nearest one was on the date of their birth. It will also display the official 
+This webpage will allow the user to see how many Near Earth Objects existed and how close the nearest one was on the date of their birth. It will also display the official NASA image of the day for that day, if one is available.
 
 
 ## Setup/Installation Requirements
