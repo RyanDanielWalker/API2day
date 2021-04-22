@@ -3,7 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import AsteroidInfo from './js/asteroid.js';
-import EpicImg from './js/epic.js'
+import EpicImg from './js/epic.js';
 
 function getElements(response, date) {
   let userDate = Object.keys(response["near_earth_objects"]);
@@ -28,10 +28,10 @@ function getPicture(response) {
 
 
 $(document).ready(function () {
-  let [month, date, year] = new Date().toLocaleDateString("en-US").split("/")
+  let [month, date, year] = new Date().toLocaleDateString("en-US").split("/");
   let today = year + '-' + ('0' + month).slice(-2) + '-' + ('0' + date).slice(-2);
-  console.log(today)
-  $("button").before(`<input id="bday" type="date" value="${today}" max="${today}">`)
+  console.log(today);
+  $("button").before(`<input id="bday" type="date" value="${today}" max="${today}">`);
   $("#form").submit(function (event) {
     event.preventDefault();
     let date = $("#bday").val();
@@ -43,7 +43,7 @@ $(document).ready(function () {
     EpicImg.getImg(date)
       .then(function (response) {
         getPicture(response);
-      })
+      });
   });
 });
 
