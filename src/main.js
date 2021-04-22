@@ -31,7 +31,7 @@ $(document).ready(function () {
   let [month, date, year] = new Date().toLocaleDateString("en-US").split("/")
   let today = year + '-' + ('0' + month).slice(-2) + '-' + ('0' + date).slice(-2);
   console.log(today)
-  $("button").before(`<input id="bday" type="date" max="${today}">`)
+  $("button").before(`<input id="bday" type="date" value="${today}" max="${today}">`)
   $("#form").submit(function (event) {
     event.preventDefault();
     let date = $("#bday").val();
