@@ -16,19 +16,17 @@ This webpage will allow the user to see how many Near Earth Objects existed and 
 
 ### Installation
 1. Clone the repository: `$ git clone https://github.com/RyanDanielWalker/API2day`
-2. Navigate to the `my-project/` directory on your computer
+2. Navigate to the `API2day/` directory on your computer
 3. Open with your preferred text editor to view the code base
 4. To start a development server and view the project in the browser:
-    * Navigate to `my-project/` in your command line
+    * Navigate to `API2day/` in your command line
     * Run the command `npm install` to install dependencies
+    * Generate API key at `https://api.nasa.gov/`
+    * Create .env file
+    * Store API key as API_KEY={Your API key here}
     * Optionally, run the command `npm run build` to make a bundle of the files
     * Finally, run the command `npm run start` to start a development server
 5. To run tests, navigate to `my-project/` in your terminal and run the command `npm run test`
-
-### Install API Key
-* Generate API key at `https://api.nasa.gov/`
-* Create .env file
-* Store API key as API_KEY={Your API key here}
 
 ## Known Bugs
 
