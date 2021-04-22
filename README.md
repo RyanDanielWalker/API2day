@@ -25,6 +25,11 @@ This webpage will allow the user to see how many Near Earth Objects existed and 
     * Finally, run the command `npm run start` to start a development server
 5. To run tests, navigate to `my-project/` in your terminal and run the command `npm run test`
 
+### Install API Key
+* Generate API key at `https://api.nasa.gov/`
+* Create .env file
+* Store API key as API_KEY={Your API key here}
+
 ## Known Bugs
 
 
